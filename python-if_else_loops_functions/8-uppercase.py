@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+if not str:
+    str = " "
 def uppercase(str):
     for i in range(0, len(str)):
         if ord(str[i]) >= 97:
