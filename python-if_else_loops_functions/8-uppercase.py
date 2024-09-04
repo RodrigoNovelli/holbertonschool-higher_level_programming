@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-if not str:
-    str = " "
 def uppercase(str):
-    for i in range(0, len(str)):
-        if ord(str[i]) >= 97:
-            p = ord(str[i]) - 32
-            a = chr(p)
-        elif ord(str[i]) < 97:
-            a = str[i]
-        if i == len(str) - 1:
-            print("{}" .format(a))
+    i = 0
+    if str == "":
+        a = "\n"
+    while i != len(str) or i == 0:
+        if str != "":
+            if ord(str[i]) >= 97:
+                p = ord(str[i]) - 32
+                a = chr(p)
+            elif ord(str[i]) < 97:
+                a = str[i]
+        if i + 1 != len(str) or str == "":
+            print("{}" . format(a), end="")
+            if str == "":
+                break
         else:
-            print("{}" .format(a), end="")
+            print("{}" .format(a))
+        i += 1
