@@ -4,6 +4,9 @@ def pow(a, b):
     if b > 0:
         for i in range(1, b + 1):
             j = j * a
+    elif b < 0 and a < 0:
+        for i in range(1, abs(b)):
+            j = j / a
     else:
         for i in range(1, abs(b) + 1):
             j = j / a
