@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    for i in my_string:
+    for i in range (0, len(my_string) -1):
         if my_string[i] == 63 or my_string[i] == 43:
             list.remove(my_string[i])
         else:
