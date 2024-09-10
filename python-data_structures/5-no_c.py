@@ -5,4 +5,3 @@ def no_c(my_string):
             list.remove(my_string[i])
         else:
             continue
-    return (my_string)
