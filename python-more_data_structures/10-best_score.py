@@ -2,7 +2,7 @@
 def best_score(a_dictionary):
     max_v = 0
     max_k = ""
-    if a_dictionary is None:
+    if a_dictionary is None or not a_dictionary:
         return (None)
     else:
         for k, v in a_dictionary.items():
