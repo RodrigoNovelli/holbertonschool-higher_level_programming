@@ -7,6 +7,7 @@ def best_score(a_dictionary):
     else:
         for k, v in a_dictionary.items():
             if v > max_v:
+                max_v = v
                 max_k = k
             else:
                 continue
