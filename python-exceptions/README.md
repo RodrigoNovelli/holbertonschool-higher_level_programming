@@ -1,0 +1,1 @@
+In this directory we are gonna learn how to handle exceptions in python errors
