@@ -4,9 +4,6 @@ This is a mudle that defines a class
 """
 
 
-from typing import Any
-
-
 class Square:
     """
     This is a class that defines a square
