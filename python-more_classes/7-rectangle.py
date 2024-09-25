@@ -57,15 +57,15 @@ class Rectangle:
         return ("Rectangle({:d}, {:d})" .format(self.__width, self.__height))
 
     def __str__(self):
-        rec = []
+        r = []
         if self.__height == 0 or self.__width == 0:
             return ("")
         else:
             for i in range(self.__height):
-                [rec.append(str(self.print_symbol)) for j in range(self.__width)]
+                [r.append(str(self.print_symbol)) for j in range(self.__width)]
                 if i is not (self.__height - 1):
-                    rec += "\n"
-            return ("".join(rec))
+                    r += "\n"
+            return ("".join(r))
 
     def area(self):
         return (self.__width * self.__height)
