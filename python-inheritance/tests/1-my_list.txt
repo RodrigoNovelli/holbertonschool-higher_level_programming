@@ -1,5 +1,5 @@
 import unittest
-from my_list import MyList  # Asegúrate de que el nombre del archivo con la clase sea my_list.py
+from 1_my_list import MyList  # Cambia esto por el nombre correcto del archivo
 
 class TestMyList(unittest.TestCase):
     
