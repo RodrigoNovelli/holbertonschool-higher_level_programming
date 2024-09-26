@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+# Importamos la clase BaseGeometry del módulo que contiene la clase (asumiendo que está en base_geometry.py)
+from 7-base_geometry import BaseGeometry
+
+def main():
+    # Creamos una instancia de BaseGeometry
+    bg = BaseGeometry()
+
+    # Intentamos llamar al método area() para verificar que levante una excepción
+    try:
+        print("Calling area() method...")
+        bg.area()
+    except Exception as e:
+        print(f"Error: {e}")
+
+    # Validamos algunos valores con el método integer_validator()
+    try:
+        print("\nValidating value 10 with integer_validator()...")
+        bg.integer_validator("value", 10)
+        print("Value 10 is valid.")
+    except Exception as e:
+        print(f"Error: {e}")
+
+    try:
+        print("\nValidating value -5 with integer_validator()...")
+        bg.integer_validator("value", -5)
+    except Exception as e:
+        print(f"Error: {e}")
+
+    try:
+        print("\nValidating a string 'five' with integer_validator()...")
+        bg.integer_validator("value", "five")
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
