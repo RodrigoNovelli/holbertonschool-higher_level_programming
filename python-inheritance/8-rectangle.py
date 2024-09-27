@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-BaseGeoametry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 """
 This is new Module
