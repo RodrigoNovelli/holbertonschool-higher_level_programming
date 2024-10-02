@@ -1,0 +1,1 @@
+In this directory we are going to learn how to use inpus outputs, system calls and JSON
