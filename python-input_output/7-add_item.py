@@ -2,11 +2,14 @@
 
 
 """
-Módulo para añadir elementos a una lista almacenada en un archivo JSON.
+add_item.py
 
-Este script carga una lista desde un archivo JSON, agrega nuevos elementos
-pasados como argumentos de la línea de comandos y guarda la lista de nuevo
-en el archivo JSON.
+Este módulo permite añadir elementos a una lista almacenada en un archivo JSON.
+Carga una lista existente desde un archivo, agrega elementos pasados como
+argumentos de la línea de comandos y guarda la lista de nuevo en el archivo JSON.
+
+Uso:
+    ./add_item.py elemento1 elemento2 ...
 """
 
 from sys import argv
