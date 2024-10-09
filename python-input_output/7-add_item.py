@@ -5,7 +5,7 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 filename = "add_item.json"
 try:
     load_from_json_file(filename)
-except:
+except ValueError:
     list = []
 for i in range(1, len(argv)):
     list.append(argv[i])
