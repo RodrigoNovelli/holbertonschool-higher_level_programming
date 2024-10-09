@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 Este script carga una lista desde un archivo JSON, agrega nuevos elementos
 pasados como argumentos de la línea de comandos y guarda la lista de nuevo
