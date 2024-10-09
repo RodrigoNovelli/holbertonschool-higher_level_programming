@@ -12,6 +12,9 @@ Uso:
 """
 
 from sys import argv
+"""
+Permitte utilizar argvs
+"""
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 """
 Carga un objeto de Python desde un archivo JSON.
