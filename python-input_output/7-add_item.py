@@ -4,9 +4,8 @@
 """
 add_item.py
 
-Este módulo permite añadir elementos a una lista almacenada en un archivo JSON.
-Carga una lista existente desde un archivo, agrega elementos pasados como
-argumentos de la línea de comandos y guarda la lista de nuevo en el archivo JSON.
+Este módulo permite añadir elementos a una lista
+almacenada en un archivo JSON.
 
 Uso:
     ./add_item.py elemento1 elemento2 ...
@@ -14,7 +13,13 @@ Uso:
 
 from sys import argv
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+"""
+Carga un objeto de Python desde un archivo JSON.
+"""
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+"""
+    Guarda un objeto de Python en un archivo JSON.
+"""
 filename = "add_item.json"
 try:
     load_from_json_file(filename)
