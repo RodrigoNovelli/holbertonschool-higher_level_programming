@@ -30,9 +30,9 @@ def fetch_and_save_posts():
 
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
-        postslist = r.json()
+        postslist_ = r.json()
     data = []
-    for posts in postslist:
+    for posts in postslist_:
         data.append({
             'id' : posts['id'],
             'title' : posts['title'],
