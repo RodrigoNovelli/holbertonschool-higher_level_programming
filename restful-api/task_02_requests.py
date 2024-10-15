@@ -30,13 +30,13 @@ def fetch_and_save_posts():
 
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
-        postslist_ = r.json()
+        info = r.json()
     data = []
-    for posts in postslist_:
+    for i in info:
         data.append({
-            'id' : posts['id'],
-            'title' : posts['title'],
-            'body' : posts['body']
+            'id' : i['id'] ,
+            'title' : i['title'],
+            'body' : i['body']
         })
     with open('posts.csv', mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=['id', 'title', 'body'])
