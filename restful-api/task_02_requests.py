@@ -18,9 +18,9 @@ def fetch_and_print_posts():
 
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
-        posts = r.json()
+        postslist = r.json()
     print("Status Code: {}" .format(r.status_code))
-    for posts in posts:
+    for posts in postslist:
         print(posts['title'])
 def fetch_and_save_posts():
 
@@ -30,9 +30,9 @@ def fetch_and_save_posts():
 
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
-        posts = r.json()
+        postslist = r.json()
     data = []
-    for posts in posts:
+    for posts in postslist:
         data.append({
             'id' : posts['id'],
             'title' : posts['title'],
