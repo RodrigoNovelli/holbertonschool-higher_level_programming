@@ -7,13 +7,13 @@ add_item.py
 Este módulo permite añadir elementos a una lista
 almacenada en un archivo JSON.
 
-Uso:
-    ./add_item.py elemento1 elemento2 ...
+
 """
+
 
 from sys import argv
 """
-Permitte utilizar argvs
+Permite utilizar argvs
 """
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 """
