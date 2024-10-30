@@ -1,4 +1,3 @@
 -- Making a script that shows to values of a table ordered by number
-SELECT name, score;
-FROM second_table
+FROM second_table SELECT name, score;
 ORDER BY score DESC;
