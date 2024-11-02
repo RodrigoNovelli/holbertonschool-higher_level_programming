@@ -1,6 +1,6 @@
 -- Making a new script
 SELECT 
-tv_shows.title,
+tv_show.title,
 tv_show_genres.genre_id
 FROM
 tv_shows
