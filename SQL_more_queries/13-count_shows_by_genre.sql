@@ -1,5 +1,5 @@
 -- Making a script that shows all elements in a list and counts the elements from other table that matches with them
-SELECT tv_genres.names
+SELECT tv_genres.names,
 COUNT(*) AS number_of_shows
 FROM tv_genres
 INNER JOIN tv_show_genres
