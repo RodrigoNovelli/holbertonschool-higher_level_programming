@@ -1,5 +1,5 @@
 -- Making a script in SQL thst gropus dsts with same values
-SELECT score, COUNT(*) AS recorded
+SELECT score, COUNT(*) AS number
 FROM second_table
 GROUP BY score
-ORDER BY recorded DESC;
+ORDER BY number DESC;
