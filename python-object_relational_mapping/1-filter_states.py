@@ -26,8 +26,8 @@ def main():
     states = cursor.fetchall()
     for state in states:
         print(state)
-        cursor.close
-        db.close()
+    cursor.close
+    db.close()
 
 
 if __name__ == "__main__":
