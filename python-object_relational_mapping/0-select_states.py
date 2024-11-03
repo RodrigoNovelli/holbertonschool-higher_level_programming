@@ -3,7 +3,7 @@
 Making a script that shows all the states in a database.
 """
 import MySQLdb
-from sys import argv
+import sys
 
 
 def main():
