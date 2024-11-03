@@ -1,5 +1,5 @@
 -- Making a script that finds all the movies that have comedy
-SELECT tv_shows.title, genre_id.name
+SELECT tv_shows.title, tv_genres.name
 FROM tv_shows
 LEFT JOIN tv_show_genres
 ON tv_shows.id = tv_show_genres.show_id
