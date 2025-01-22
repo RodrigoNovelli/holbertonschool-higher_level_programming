@@ -1,0 +1,1 @@
+In this directory we are learning about data structures in pyhton, in this case we only are going to work with Lists, and Tupples.
