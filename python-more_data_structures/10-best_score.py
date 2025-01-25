@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-def best_score(a_dictionary):
+def best_score(my_dict):
     i = 0
     best_student = ''
-    if a_dictionary is None:
+    if my_dict is None or not my_dict:
         return None
     else:
-        for k in a_dictionary:
+        for k, v in my_dict.items:
             if i == 0:
-                bestscore = a_dictionary[k]
-            elif a_dictionary[k] > bestscore:
-                bestscore = a_dictionary[k]
+                bestscore = k
+            elif v > bestscore:
+                bestscore = v
                 best_student = k
             else:
-                pass
+                continue
             i += 1
         return best_student
