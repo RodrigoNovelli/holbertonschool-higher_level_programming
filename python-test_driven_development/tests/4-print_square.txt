@@ -71,6 +71,14 @@ If ``size`` is less than zero, a ValueError is raised.
 
 ::
 
+    >>> print_square(-7)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Note that type-checking occurs before value-checking.
+
+::
+
     >>> print_square(-7.5)
     Traceback (most recent call last):
     TypeError: size must be an integer
