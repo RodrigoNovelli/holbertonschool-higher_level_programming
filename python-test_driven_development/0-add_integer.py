@@ -14,7 +14,8 @@ def add_integer(a, b=98):
 
     a (int, float): The first number to add. Must be an integer or float.
 
-    b (int, float, optional): The second number to add. Defaults to 98. Must be an integer or float.
+    b (int, float, optional): The second number to add. Defaults to 98.
+    Must be an integer or float.
 
 
     Returns:
