@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"""
+'''
+Defines a function htat adds two numbers
+'''
+
+
+def add_integer(a, b=98):
+    """
 
     Adds two integers or floats and returns the result as an integer.
 
@@ -21,7 +27,6 @@
     TypeError: If a or b is not an integer or float.
 
     """
-def add_integer(a, b=98):
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
