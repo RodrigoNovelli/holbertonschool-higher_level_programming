@@ -7,24 +7,29 @@ Dfines a dunction that divides a matrix
 def matrix_divided(matrix, div):
     """
 
-    Divides all elements of a matrix by a given divisor and rounds the result to 2 decimal places.
+    Divides all elements of a matrix by a given divisor and rounds
+    the result to 2 decimal places.
 
 
     Parameters:
 
-    matrix (list of list of int/float): A matrix (list of lists) containing integers or floats.
+    matrix (list of list of int/float): A matrix (list of lists)
+    containing integers or floats.
 
-    div (int, float): The divisor by which to divide each element of the matrix.
+    div (int, float): The divisor by which to divide each element
+    of the matrix.
 
 
     Returns:
 
-    list of list of float: A new matrix with each element divided by div and rounded to 2 decimal places.
+    list of list of float: A new matrix with each element divided
+    by div and rounded to 2 decimal places.
 
 
     Raises:
 
-    TypeError: If matrix is not a list of lists of integers/floats, or if div is not a number.
+    TypeError: If matrix is not a list of lists of integers/floats,
+    or if div is not a number.
 
     ZeroDivisionError: If div is zero.
 
