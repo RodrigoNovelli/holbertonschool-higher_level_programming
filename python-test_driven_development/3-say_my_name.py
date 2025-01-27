@@ -1,4 +1,4 @@
-#!/use/bin/python3
+#!/usr/bin/python3
 '''
 Defines a function that prints a name
 '''
