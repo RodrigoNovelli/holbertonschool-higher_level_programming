@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
-This is a mudle that defines a class
+This is the "Square"  module.
 """
 
 
 class Square:
-    """
-    This is a class that defines a square
-    """
-    def __init__(self, size):
+    """A class that defines a square by size"""
+    def __init__(self, size=0):
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = size
