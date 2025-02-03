@@ -3,6 +3,7 @@
 This is a mudle that defines a class
 """
 
+
 class Square:
     """A class that defines a square by size and can compute area"""
     def __init__(self, size=0):
