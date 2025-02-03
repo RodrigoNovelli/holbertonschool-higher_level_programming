@@ -4,16 +4,13 @@ This is a mudle that defines a class
 """
 
 class Square:
-    '''
-    This is a class that defines a square
-    '''
+    """A class that defines a square by size and can compute area"""
     def __init__(self, size=0):
         if not isinstance(size, int):
-            raise TypeError("")
-        elif size < 0:
+            raise TypeError("size must be an integer")
+        if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-            
+        self.__size = size
+
     def area(self):
-        return (self.__size * self.__siz)
+        return self.__size * self.__size
