@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-In this module we are checking if the obj is 
+In this module we are checking if the obj is
 directly or indiretly a child form a class
 '''
 
