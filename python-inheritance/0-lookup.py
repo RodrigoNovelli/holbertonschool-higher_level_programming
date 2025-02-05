@@ -5,6 +5,8 @@ Making a function thar returns a list of attributes
 
 
 def lookup(obj):
-    list_att = []
-    list_att = dir(obj)
-    return list_att
+    '''
+    This function creates a list, and then uses dir method to
+    put the attributes in it
+    '''
+    return dir(obj)
