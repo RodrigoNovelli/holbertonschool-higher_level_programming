@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-BaseGeometry =__import__('7-base_geometry').BaseGeometry
 '''
-In this module we create a subclass 
+In this module we create a subclass
 '''
+
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     '''
-    Rectangle object that inherits from 
+    Rectangle object that inherits from
     BaseGeometry
     '''
     def __init__(self, width, height):
