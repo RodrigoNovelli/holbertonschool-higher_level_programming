@@ -4,7 +4,7 @@ This module creates a new class
 """
 
 
-class BaseGeometry(self):
+class BaseGeometry:
     """
     Empty class
     """
