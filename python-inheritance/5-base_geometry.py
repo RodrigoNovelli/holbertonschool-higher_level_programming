@@ -6,6 +6,6 @@ This module creates a new class
 
 class BaseGeometry(self):
     '''
-    empty class
+    Empty class
     '''
     pass
