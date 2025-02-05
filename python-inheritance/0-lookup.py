@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 '''
 Making a function thar returns a list of attributes
 '''
