@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').rectangle
 '''
 In this module we create a subclass that is
 based on rectangle
 '''
+
+
+Rectangle = __import__('9-rectangle').rectangle
 
 
 class Square(Rectangle):
