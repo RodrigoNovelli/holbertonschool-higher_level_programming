@@ -1,0 +1,1 @@
+This directoy is about abstracct calsses
