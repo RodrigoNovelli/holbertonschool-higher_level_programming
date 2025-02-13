@@ -2,7 +2,6 @@
 '''
 In this module we are opening and reading a file
 '''
-import sys
 
 
 def read_file(filename=""):
