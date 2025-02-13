@@ -7,7 +7,7 @@ that writes a line in a file
 
 def write_file(filename="", text=""):
     '''
-    This function creates a file and 
+    This function creates a file and
     writes it
     '''
     with open(filename, 'w', encoding='utf-8') as file:
