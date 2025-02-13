@@ -9,4 +9,4 @@ def class_to_json(obj):
     this function will return a class
     in json format
     '''
-    return __dict__(obj)
+    return obj.__dict__
