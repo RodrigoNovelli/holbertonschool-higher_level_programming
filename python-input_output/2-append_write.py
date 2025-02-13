@@ -10,6 +10,6 @@ def append_write(filename="", text=""):
     This function opens a file and adds the
     content
     '''
-    with open(filename, 'w', encoding="utf-8") as file:
+    with open(filename, 'a', encoding="utf-8") as file:
         char = file.write(text)
         return char
