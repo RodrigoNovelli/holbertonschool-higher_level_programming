@@ -8,17 +8,9 @@ json file.
 
 
 import sys
-'''
-command line args
-'''
-from 6-load_from_json_file import load_from_json_file
-'''
-converts from json
-'''
-from 5-save_to_json_file import save_to_json_file
-'''
-converts to json
-'''
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+
 
 filename = "add_item.json"
 try:
