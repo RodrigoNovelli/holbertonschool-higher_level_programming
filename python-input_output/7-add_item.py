@@ -23,8 +23,8 @@ converts to json
 filename = "add_item.json"
 try:
     content = load_from_json_file(filename)
-except:
+except FileNotFoundError:
     content = []
-for i in range(1, len(argv)):
-    content.append(argv[i])
+for i in range(1, len(sys.argv)):
+    content.append(sys.argv[i])
 save_to_json_file(content, filename)
