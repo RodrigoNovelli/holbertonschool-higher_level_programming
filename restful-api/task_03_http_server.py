@@ -33,7 +33,7 @@ class Server(BaseHTTPRequestHandler):
             self.end_headers()
             self.info = {
                 "version": "1.0",
-                "description": "A simple API built wit http"
+                "description": "A simple API built with http"
             }
             self.wfile.write(json.dumps(self.info).encode('utf-8'))
         else:
