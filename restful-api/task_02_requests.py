@@ -18,7 +18,7 @@ def fetch_and_print_posts():
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
         info = r.json()
-    print("Status code: {}".format(r.status_code))
+        print("Status code: {}".format(r.status_code))
     for posts in info:
         print(posts['title'])
 
@@ -38,7 +38,7 @@ def fetch_and_save_posts():
             'body': i['body'],
             'title': i['title'],
         })
-    with open('posts.cvs', 'w', newline='', encoding="utf-8") as csv_file:
+    with open('posts.csv', 'w', newline='', encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldsname=['id', 'title', 'body'])
         writer.writeheader()
         writer.writerows(data)
