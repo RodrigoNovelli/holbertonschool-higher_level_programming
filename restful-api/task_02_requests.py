@@ -29,6 +29,7 @@ def fetch_and_save_posts():
     in a csv file
     '''
     r = requests.get("https://jsonplaceholder.typicode.com/posts")
+    info = ''
     if r.status_code == 200:
         info = r.json()
     data = []
