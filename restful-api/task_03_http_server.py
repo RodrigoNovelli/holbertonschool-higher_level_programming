@@ -18,7 +18,7 @@ class Server(BaseHTTPRequestHandler):
             self.wfile.write(b"Hello, this is a simple API")
         elif self.path == '/data':
             self.send_response(200)
-            self.send_header("Content-type", "application/js")
+            self.send_header("Content-type", "application/json")
             self.end_headers()
             self.data = {"name": "Jhon", "age": 30, "city": "New York"}
             self.wfile.write(json.dumps(self.data).encode('utf-8'))
@@ -29,7 +29,7 @@ class Server(BaseHTTPRequestHandler):
             self.wfile.write(b"OK")
         elif self.path == '/info':
             self.send_response(200)
-            self.send_header("Content-type", "text/application/js")
+            self.send_header("Content-type", "application/json")
             self.end_headers()
             self.info = {
                 "version": "1.0",
