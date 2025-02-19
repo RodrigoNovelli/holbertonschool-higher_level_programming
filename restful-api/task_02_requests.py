@@ -7,7 +7,7 @@ with a public API
 
 import requests
 import json
-import cvs
+import csv
 
 
 def fetch_and_print_posts():
