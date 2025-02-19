@@ -15,7 +15,7 @@ def fetch_and_print_posts():
     Function to print all the posts
     in json
     '''
-    r = request.get("https://jsonplaceholder.typicode.com/posts")
+    r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
         info = r.json()
     print("Status code: {}".format(r.status_code))
@@ -28,7 +28,7 @@ def fetch_and_save_posts():
     Function to fetch posts and save it
     in a csv file
     '''
-    r = request.get("https://jsonplaceholder.typicode.com/posts")
+    r = requests.get("https://jsonplaceholder.typicode.com/posts")
     if r.status_code == 200:
         info = r.json()
     data = []
