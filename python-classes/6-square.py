@@ -9,6 +9,8 @@ class Square:
     This is a class that defines a square
     """
     def __init__(self, size=0, position=(0, 0)):
+        a = position[0]
+        b = position[1]
         if not isinstance(size, int):
             raise TypeError("")
         elif size < 0:
@@ -17,7 +19,7 @@ class Square:
             self.__size = size
         if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif position < 0:
+        elif a < 0 or b < 0:
             raise ValueError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
