@@ -9,6 +9,7 @@ class Rectangle:
     This is a class that defines a rectangle
     """
     def __init__(self, width=0, height=0):
+        self.print_symbol = "#"
         self.__width = width
         self.__height = height
         if not isinstance(width, int):
@@ -48,15 +49,13 @@ class Rectangle:
         return ("Rectangle({:d}, {:d})" .format(self.__width, self.__height))
 
     def __str__(self):
-        rec = ""
+        rec = []
         if self.__height == 0 or self.__width == 0:
-            return (rec)
+            return ""
         else:
             for i in range(self.__height):
-                [rec.append(str(self.print_symbol)) for j in range(self.__width)]
-                if i is not (self.__height - 1):
-                    rec += "\n"
-            return (rec)
+                rec.append(str(self.print_symbol) * (self.__width))
+            return "\n".join(rec)
 
     def area(self):
         return (self.__width * self.__height)
