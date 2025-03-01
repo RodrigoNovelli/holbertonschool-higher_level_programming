@@ -13,19 +13,24 @@ from flask_jwt_extended import (JWTManager, create_access_token,
 
 
 app = Flask(__name__)
-app.config['S_KEY'] = 'Secret_key'
+app.config['JWT_SECRET_KEY'] = 'Secret_key'
 auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
 users = {
-    "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
-    "admin1": {"username": "admin1", "password": generate_password_hash("password"), "role": "admin"}
+    "user1": {"username": "user1",
+              "password": generate_password_hash("password"),
+              "role": "user"},
+    "admin1": {"username": "admin1",
+               "password": generate_password_hash("password"),
+               "role": "admin"}
 }
+
 
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if user and check_password_hash(user[password], password):
+    if user and check_password_hash(user['password'], password):
         return user
     else:
         return None
@@ -44,8 +49,9 @@ def login():
     password = data.get('password')
     user = users.get(username)
     if user and check_password_hash(user['password'], password):
-        access_tok = create_access_token(identity={'username': username, 'role': user['role']})
-        return jsonify(access_tok=access_tok), 200
+        access_tok = create_access_token(identity={'username': username,
+                                                   'role': user['role']})
+        return jsonify(access_token=access_tok), 200
     else:
         return jsonify({"error": "Invalid credentials"}), 401
 
@@ -61,7 +67,7 @@ def protected():
 def admin():
     current_user = get_jwt_identity()
     if current_user['role'] != 'admin':
-        return jsonify({"error": "Admin access requiered"}), 403
+        return jsonify({"error": "Admin access required"}), 403
     else:
         return "Admin Access: Granted"
 
@@ -88,7 +94,7 @@ def handle_revoked_token_error(err):
 
 @jwt.needs_fresh_token_loader
 def handle_needs_fresh_token_error(err):
-    return jsonify({"error": "Fresh token requiered"}), 401
+    return jsonify({"error": "Fresh token required"}), 401
 
 
 if __name__ == "__main__":
