@@ -16,20 +16,24 @@ class Square:
         except:
             IndexError
             raise ValueError(message)
-        if not isinstance(size, int):
-            raise TypeError("")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-        if not isinstance(position, tuple):
+        try:
+            if not isinstance(size, int):
+                raise TypeError("")
+            elif size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
+            if not isinstance(position, tuple):
+                raise TypeError(message)
+            elif a < 0 or b < 0:
+                raise ValueError(message)
+            elif a and b is None or b and a is None:
+                raise ValueError(message)
+            else:
+                self.__position = position
+        except:
+            TypeError
             raise TypeError(message)
-        elif a < 0 or b < 0:
-            raise ValueError(message)
-        elif a and b is None or b and a is None:
-            raise ValueError(message)
-        else:
-            self.__position = position
 
     @property
     def size(self):
