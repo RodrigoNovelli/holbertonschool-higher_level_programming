@@ -13,8 +13,7 @@ class Square:
         try:
             a = position[0]
             b = position[1]
-        except:
-            IndexError
+        except IndexError:
             raise ValueError(message)
         try:
             if not isinstance(size, int):
@@ -31,8 +30,7 @@ class Square:
                 raise ValueError(message)
             else:
                 self.__position = position
-        except:
-            TypeError
+        except TypeError:
             raise TypeError(message)
 
     @property
