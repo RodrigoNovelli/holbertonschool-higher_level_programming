@@ -41,12 +41,12 @@ def users(username):
 @app.route("/add_user", methods=['POST'])
 def add():
     new_user = request.get_json()
-    user = new_user['username']
+    user = new_user.get('username')
     name = new_user['name']
     age = new_user['age']
     city = new_user['city']
     if not isinstance(user, str) or not user:
-        raise ValueError({"error": "Username is required"})
+        return jsonify({"error": "Username is required"}), 400
     users_list[user] = {"city": city, "age": age,
                         "name": name, "username": user}
     message = {"message": "User added", "user": users_list[user]}
