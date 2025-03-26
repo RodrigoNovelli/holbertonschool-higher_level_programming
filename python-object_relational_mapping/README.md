@@ -1,0 +1,1 @@
+In this projet we are learning to use MySQL from python
