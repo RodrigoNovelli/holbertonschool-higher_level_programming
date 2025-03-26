@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 This module is for making a script that
 is the same as the last one but safe
