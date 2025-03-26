@@ -10,9 +10,7 @@ Base = declarative_base()
 
 
 class State(Base):
-    '''
-    class state
-    '''
+    '''class state'''
     __tabname__ = 'states'
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
