@@ -14,7 +14,7 @@ if __name__ == "__main__":
     exe = "SELECT cities.id, cities.name, states.name FROM cities\
         JOIN states ON cities.state_id = states.id ORDER BY cities.id"
     cur.execute(exe)
-    rows = cur.fetchall
+    rows = cur.fetchall()
     for row in rows:
         print(row)
     cur.close()
