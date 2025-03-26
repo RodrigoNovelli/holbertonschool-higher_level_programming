@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 In this module we are making a script
 that searches for a word in a table
