@@ -1,7 +1,6 @@
-#!/usr/bin/python3
 '''
-In this module we are making a script that
-gets information from a database
+In this module we are making a script
+that lists all states that starts with N
 '''
 import MySQLdb
 from sys import argv
@@ -13,6 +12,7 @@ if __name__ == "__name__":
     cur = db.cursor()
     rows = cur.execute("SELECT * FROM states ORDER BY states.id")
     for row in rows:
-        print(cur.fetchone())
+        if row[1][0] == 'N':
+            print(cur.fetchall())
     cur.close()
     db.close()
