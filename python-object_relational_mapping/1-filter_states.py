@@ -14,6 +14,6 @@ if __name__ == "__name__":
     rows = cur.execute("SELECT * FROM states ORDER BY states.id")
     for row in rows:
         if row[1][0] == 'N':
-            print(cur.fetchall())
+            print(cur.fetchone())
     cur.close()
     db.close()
