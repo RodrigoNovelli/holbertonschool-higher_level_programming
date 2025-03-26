@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 In this module we are making a script that
 gets information from a database
